@@ -20,3 +20,10 @@ console.log(text2.replace(rg, "_$1_")); //_Henry_ is a suspicious character
 let susp = text2.split(" ")[3];
 let sp = new RegExp("\\b(" + susp + ")\\b", "gi");
 console.log(text2.replace(sp, (s) => s.toUpperCase())); //Henry is a SUSPICIOUS character
+
+let splt = text2.split(" ");
+let end = splt[splt.length - 1];
+
+let r = new RegExp("\\b(" + end + ")\\b", "gi");
+console.log(text2.replace(r, (e) => e.toUpperCase()));
+//Henry is a suspicious CHARACTER
