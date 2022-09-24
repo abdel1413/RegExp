@@ -5,6 +5,7 @@
  * use the slash-based notation
  * The only way to solve this is to buld up a string and use
  * RegExp constructor on that.
+ *
  */
 
 let name = "Henry";
