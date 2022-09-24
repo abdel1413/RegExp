@@ -35,3 +35,14 @@ let ind = sticky.exec("yanx abc");
 console.log(ind); //null
 // bcz it doesn't updates the lastindex position
 console.log(sticky.lastIndex); //0
+
+//NOTE WHEN USING MULTIPLE EXEC CALL FOR SHARED REGEXP,
+//THE AUTOMATIC LASTINDEX CALL'S UPDATES MAY CAUSE PROBLEM
+//THE REGEX MAY ACCIDENTALY START AT THE INDEX THAT WAS LEFT OVER
+let digit = /\d/g;
+let d = digit.exec("here it is: 1");
+console.log(d); //['1', index: 12, input: 'here it is: 1', groups: undefined]
+console.log(d.index); //12
+console.log(d[0]); //1
+console.log(digit.exec("and now :1")); // null
+// Here the 2nd call to exec made lastIndex changed
