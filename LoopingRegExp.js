@@ -16,5 +16,5 @@ let match;
 //use while loop inside which we goint to assign the
 //expression where  digit executes the input)
 while ((match = digits.exec(input))) {
-  console.log(`found number ${match[0]} at index ${match.index} `);
+  console.log(`found number ${match[0]} at index ${match.index}`);
 }
