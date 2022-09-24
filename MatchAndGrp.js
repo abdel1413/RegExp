@@ -35,3 +35,11 @@ console.log(digit.exec(" haehoee 134"));
 //['134', '4', index: 9, input: ' haehoee 134', groups: undefined]
 //NOTE THE POSISITION OF THE MATCHED GRP ELT IS ALWAYS THE LAST
 //ELT IN THE GRP
+
+//Note global option may change the way match works on the string
+//instead of returning array similar to exec, it returns array
+// of only the matched values
+let g = /an/g;
+
+console.log("banana".match(g)); //['an', 'an']
+console.log(g.exec("banana")); //['an', index: 1, input: 'banana', groups: undefined]
