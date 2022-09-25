@@ -16,13 +16,27 @@ console.log(/bcd/.test("abcabdbcadcd")); //false bcz there is not parttern
 //char inside the brackets means a range of char
 console.log(/[0-9]/.test("in 1990"));
 /**
- * \d => any digit same as [0-9]
  * \D => char that's not a digit
- * \w => an alphnumeric char
- * \s => any  white space( tab, space, newline)
+ * /\s/ => any  white space( tab, space, newline)
  * \S => a non whitespace char
- * . => any char except for newline
+ * /abc/	A sequence of characters
+/[abc]/	Any character from a set of characters
+/[^abc]/	Any character not in a set of characters
+/[0-9]/	Any character in a range of characters
+/x+/	One or more occurrences of the pattern x
+/x+?/	One or more occurrences, nongreedy
+/x?/	Zero or one occurrence
+/x{2,4}/ Two to four occurrences
+/(abc)/	A group
+/a|b|c/	Any one of several patterns
+/\d/	Any digit character  same as [0-9]
+/\w/	An alphanumeric character (“word character”)
+/./	Any character except newlines
+/\b/ A word boundary
+/^/	Start of input
+/$/	End of input
  */
+// /x*/	Zero or more occurrences
 
 //match 09/20/2022/23:01
 let dateTime = /\d\d-\d\d-\d\d\d\d \d\d:\d\d/;
@@ -63,3 +77,9 @@ console.log(optional.test("neighbor")); //true though u is missing
 //{2,} => from 2 and more
 let dateTime = /\d{1,2}-\d{1,2}-\d{2,4} \d{1,2}:\d{2}/;
 console.log(dateTime.test("12-11-2022 08:44"));
+
+//methd "search" acts like indexOf and it return the first index if fund
+// or -1 otherwise
+console.log("  word".search(/\S/));
+// → 2
+console.log("    ".search(/\S/)); //-1
