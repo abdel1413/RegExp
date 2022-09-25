@@ -18,3 +18,20 @@ let match;
 while ((match = digits.exec(input))) {
   console.log(`found number ${match[0]} at index ${match.index}`);
 }
+
+//looping over only the words in the input string
+let d = /[a-zA-Z]+/g;
+let m;
+while ((m = d.exec(input))) {
+  console.log(m[0] + " at index " + m.index);
+}
+/**
+ * A at index 0
+ string at index 2
+ with at index 9
+ numbers at index 16
+ in at index 24
+ it at index 27
+ and at index 39
+
+ */
