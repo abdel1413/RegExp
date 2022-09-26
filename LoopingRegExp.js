@@ -19,6 +19,11 @@ while ((match = digits.exec(input))) {
   console.log(`found number ${match[0]} at index ${match.index}`);
 }
 
+//found number 3 at index 14
+//found number 42 at index 33
+// found number 57 at index 36
+//found number 88 at index 43
+
 //looping over only the words in the input string
 let d = /[a-zA-Z]+/g;
 let m;

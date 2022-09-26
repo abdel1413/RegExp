@@ -5,4 +5,4 @@
 
 let animalCount = /\b\d+ (pig|cow|checken)s?\b/;
 console.log(animalCount.test("10 pigs")); //true
-console.log(animalCount.test("10 pigcheckens")); //false
+console.log(animalCount.test("10 pigcheckens")); //false :pigcheckens is not in the patterns
