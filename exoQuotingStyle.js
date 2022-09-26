@@ -7,4 +7,5 @@ console.log(text.replace(/C/g, "D"));
 //untouched
 console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 let doubeQuote = /(^|\W)'|'(\W|$)/g;
+
 console.log(text.replace(doubeQuote, '$1"$2'));
