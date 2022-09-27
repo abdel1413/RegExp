@@ -41,7 +41,7 @@ function verify(regExp, yes, no) {
     }
   }
   for (let st of no) {
-    if (!regExp.test(st)) {
+    if (regExp.test(st)) {
       console.log(`Unexpected match for ${st}`);
     }
   }
